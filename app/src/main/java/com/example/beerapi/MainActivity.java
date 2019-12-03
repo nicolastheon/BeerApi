@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.beerapi.Vu.BeerFragment;
+import com.example.beerapi.Vu.HomeFragment;
+import com.example.beerapi.Vu.VideoFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -16,10 +20,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        //I added this if statement to keep the selected fragment when rotating the device
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
         }
     }
 
@@ -40,10 +42,7 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new VideoFragment();
                             break;
                     }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
-
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
                     return true;
                 }
             };
