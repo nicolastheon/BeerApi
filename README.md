@@ -12,6 +12,8 @@ Projet d'étude réalisé en 4ème année à l'ESIEA. Création d'une applicatio
 
 -Appel API Rest.
 
+-Bottom Navigation bar. 
+
 -Stockage des données en cache.
 
 -Architecture MVC.
